@@ -1,0 +1,55 @@
+<!--
+@Author: Justin Schieck
+@Date:   2017-03-27T12:42:06-04:00
+@Email:  schieck91@gmail.com
+@Last modified by:   Justin Schieck
+@Last modified time: 2017-04-05T12:23:41-04:00
+-->
+
+
+
+<% include partials/header.ejs %>
+<h1 class="login-title">Login</h1>
+<main class="container">
+    <section class="jumbotron" style="margin-top: 40px;">
+
+    <% if (messages.length > 0) { %>
+        <div class="alert alert-danger"><%= messages %></div>
+    <% }
+    else { %>
+        <div class="alert alert-info">Please enter your Credentials</div>
+    <% } %>
+    <form method="post">
+        <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">Email: *</label>
+            <input name="username" id="username" required />
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">Password: *</label>
+            <input name="password" id="password" type="password" required />
+        </div>
+
+        <button class="btn btn-success col-sm-offset-2">Login</button>
+        <div class="col-sm-offset-2 face-log">
+            <a href="/facebook">
+                <img src="/images/facebook.png" />
+            </a>
+        </div>
+        <div class="col-sm-offset-2 google-log">
+            <a href="/google">
+                <img src="/images/google.png" />
+            </a>
+        </div>
+        <div class="col-sm-offset-2 google-log">
+          <a href="/outlook">
+              <img src="/images/Outlook-Login.png" />
+          </a>
+        </div>
+    <div class="message-reg-log">
+        Need access?  <a href="/register" title="Register">Register</a>
+      </div>
+    </form>
+  </section>
+</main>
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,293 @@
+/**
+ * @Author: Justin Schieck
+ * @Date:   2017-03-21T15:42:02-04:00
+ * @Email:  schieck91@gmail.com
+ * @Last modified by:   Justin Schieck
+ * @Last modified time: 2017-04-03T18:27:04-04:00
+ */
+
+
+
+body {
+ 	margin-top: 50px;
+ 	margin-bottom: 50px;
+ 	background: none;
+ }
+
+ .full {
+   background: url(/images/tattoo.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+.title{
+    font-family: 'Lobster', cursive;
+    font-size: 86px;
+}
+
+.subtitle{
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+}
+
+.title,.subtitle{
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-align: center;
+}
+
+.row-title{
+
+  margin-top: 5%;
+  position: absolute;
+
+  top: 180px;
+  vertical-align: middle;
+  text-align: center;
+  width:100%;
+}
+
+
+
+.about-title{
+  margin-left: 220px;
+  margin-top: 80px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+/*About Section*/
+.gallary{
+  float: left;
+  margin-left: 10px;
+  margin-right: 5px;
+  width: 50%;
+  position: absolute;
+  left: 15px;
+  top: 180px;
+  vertical-align: middle;
+}
+
+.about{
+  float: left;
+  width: 65%;
+  padding: 5px;
+}
+
+.about-container{
+  padding-left: 100px;
+  margin-left: 30px;
+
+}
+
+
+.vertical-center {
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  /*background-image: url(/images/tribal-rose.jpg)no-repeat center center fixed;*/
+
+}
+.image-port{
+  float: left;
+  margin-left: 10%;
+
+}
+
+.port-img{
+  margin-left: 22%;
+	margin-right: auto;
+	display: block;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 25px;
+
+}
+
+/* PORTFOLIO SECTION */
+.gallery-details {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+/* CONTACT SECTION */
+
+.row {
+  margin-left: 10px;
+  margin-right: 5px;
+  width: 50%;
+  position: absolute;
+  left: 15px;
+  top: 180px;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  padding: 1em 0 1em 0;
+}
+
+h1.header, .reg-title, .login-title, .cust-title, .port-title{
+  margin-left: 50px;
+  margin-top: 120px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+
+}
+
+.col-md-6 {
+    width: 1000px;
+    margin-left: 22.5%;
+    margin-bottom: 80px;
+}
+.col-md-4{
+  width: 970px;
+}
+
+
+.img-responsive{
+  display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+}
+.gallery-thumb{
+  position: relative;
+  left: 10%;
+}
+
+
+
+.form-control{
+  float: left;
+  margin-top: 15px;
+}
+
+.col-md-8{
+  width:100%;
+
+}
+
+.editContent{
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.btn{
+  float: left;
+
+}
+
+.col-sm-5{
+  padding-top: 50px;
+  width: 50%;
+  float: right;
+  text-align: center;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 18px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.name{
+  font-size: 60px;
+}
+
+/*REGISTER PAGE*/
+.reg-title{
+  margin-left: 250px;
+}
+
+.message-reg{
+  margin-top: 60px;
+  margin-left: 170px;
+}
+
+#username{
+  width: 300px;
+}
+
+#password{
+  width: 300px;
+}
+
+#confirm{
+  width: 300px;
+}
+
+/*LOGIN PAGE*/
+.login-title{
+  margin-top: 80px;
+  margin-left: 250px;
+}
+
+.face-log{
+  margin-top: 80px;
+}
+.google-log{
+  margin-left: 166px;
+}
+
+
+.message-reg-log{
+  margin-top: 20px;
+  margin-left: 170px;
+}
+
+/*CUSTOMER PAGE*/
+.cust-title{
+  margin-top: 80px;
+  margin-left: 250px;
+}
+
+.container2{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.add-cust{
+  margin-left: 30px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+
+.counter{
+  padding:8px;
+  color:#ccc;
+}
+
+.form-group{
+  margin-right: 5px;
+}
+
+/* PORTFOLIO PAGE */
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+#CarouselTitles {
+  vertical-align: text-bottom;
+}
+
+.item {
+  border: 10px solid transparent;
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin: 0 auto;
+
+}

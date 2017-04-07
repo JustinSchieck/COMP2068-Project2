@@ -1,0 +1,62 @@
+<!--
+@Author: Justin Schieck
+@Date:   2017-03-27T12:42:06-04:00
+@Email:  schieck91@gmail.com
+@Last modified by:   Justin Schieck
+@Last modified time: 2017-03-30T09:50:17-04:00
+-->
+
+
+
+<% include ../partials/header.ejs %>
+
+    <h1 class="cust-title">Customers</h1>
+    <main class="container2">
+        <section class="jumbotron">
+            <span class="counter pull-right"></span>
+            <% if (user) { %>
+                <a href="/customers/add" class="add-cust">Add a New Customer</a>
+                <% } %>
+                    <table class="table table-striped table-hover" style="margin-top:20px;">
+
+
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Phone</th>
+
+                                <% if (user) { %>
+                                    <th>Actions</th>
+                                    <% } %>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <% for (var i = 0; i < customer.length; i++) { %>
+                                <tr>
+                                    <td scope="row">
+                                        <%= customer[i].name %>
+                                    </td>
+                                    <td scope="row">
+                                        <%= customer[i].address %>
+                                    </td>
+                                    <td scope="row">
+                                        <%= customer[i].phone %>
+                                    </td>
+                                    <% if (user) { %>
+                                        <td>
+                                            <a href="/customers/<%= customer[i]._id %>" class="btn btn-info">Edit</a>
+                                            <a href="/customers/delete/<%= customer[i]._id %>" class="btn btn-danger confirmation">Delete</a>
+                                        </td>
+                                        <% } %>
+                                </tr>
+                                <% } %>
+        </section>
+    </main>
+    </tbody>
+    </table>
+
+
+
+    <% include ../partials/footer.ejs %>

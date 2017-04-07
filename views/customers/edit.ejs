@@ -1,0 +1,35 @@
+<!--
+@Author: Justin Schieck
+@Date:   2017-03-27T12:42:06-04:00
+@Email:  schieck91@gmail.com
+@Last modified by:   Justin Schieck
+@Last modified time: 2017-04-04T16:24:19-04:00
+-->
+
+
+
+<% include ../partials/header.ejs %>
+
+<main class="container">
+
+<h1>Customer Details</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Customer Name: *</label>
+        <input name="name" id="name" required value="<%= customer.name %>" />
+    </div>
+    <div class="form-group">
+        <label for="address" class="col-sm-2 control-label">Address: *</label>
+        <input name="address" id="address" required value="<%= customer.address %>" />
+    </div>
+    <div class="form-group">
+        <label for="phone" class="col-sm-2 control-label">Phone:</label>
+        <input name="phone" id="phone" min="0" step="any" value="<%= customer.phone %>"  />
+    </div>
+    <button class="btn btn-success col-sm-offset-2">Save</button>
+</form>
+
+</main>
+
+<% include ../partials/footer.ejs %>

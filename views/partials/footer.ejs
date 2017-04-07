@@ -1,0 +1,56 @@
+<!--
+@Author: Justin Schieck
+@Date:   2017-03-27T12:42:06-04:00
+@Email:  schieck91@gmail.com
+@Last modified by:   Justin Schieck
+@Last modified time: 2017-04-03T00:28:10-04:00
+-->
+
+
+
+<!-- js -->
+<!-- jQuery -->
+
+<script src="js/jquery.js"></script>
+<script src="/javascripts/jquery-3.1.1.min.js"></script>
+<script src="/javascripts/clientScripts.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.12/js/adal.min.js"></script>
+<script>
+  var ADAL = new AuthenticationContext({
+      instance: 'https://login.microsoftonline.com/',
+      tenant: 'common', //COMMON OR YOUR TENANT ID
+
+      clientId: '3b53e8a1-f96c-4b8b-97d7-4538d538caea', //This is your client ID
+      redirectUri: 'http://localhost:3000/outlook/callback', //This is your redirect URI
+
+      callback: userSignedIn,
+      popUp: true
+  });
+
+  function signIn() {
+      ADAL.login();
+  }
+
+  function userSignedIn(err, token) {
+      console.log('userSignedIn called');
+      if (!err) {
+          console.log("token: " + token);
+          showWelcomeMessage();
+      }
+      else {
+          console.error("error: " + err);
+      }
+  }
+
+  function showWelcomeMessage() {
+      var user = ADAL.getCachedUser();
+      var divWelcome = document.getElementById('WelcomeMessage');
+      divWelcome.innerHTML = "Welcome " + user.profile.name;
+  }
+
+</script> 
+
+
+</body>
+</html>

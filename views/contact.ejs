@@ -1,0 +1,54 @@
+<!--
+@Author: Justin Schieck
+@Date:   2017-03-26T18:03:33-04:00
+@Email:  schieck91@gmail.com
+@Last modified by:   Justin Schieck
+@Last modified time: 2017-03-27T23:06:56-04:00
+-->
+
+<% include ./partials/header.ejs %>
+
+<!-- Contact Form for connection to mongo and mlabs  -->
+
+          <h1 class="header">Contact Information</h1>
+            <div class="row">
+              <div class="col-md-8">
+                  <div class="contact" class="form-container">
+                      <fieldset>
+                        <div id="message"></div>
+                          <form method="post" action="" name="contactform" id="contactform" enctype="multipart/form-data">
+                              <div class="form-group">
+                                  <input name="name" id="name" type="text" value="" placeholder="Name" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <input name="phone" id="phone" type="text" value="" placeholder="Phone" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <textarea name="comments" id="comments" class="form-control" rows="3" placeholder="Message" id="textArea"></textarea>
+                                  <div class="editContent">
+                                      <p class="small text-muted"><span class="guardsman">* All fields are required.</span> Once we receive your message we will respond as soon as possible.</p>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <button class="btn " type="submit" id="cf-submit" name="submit">Send</button>
+                              </div>
+                          </form>
+                      </fieldset>
+                  </div>
+                  <!-- /.form-container -->
+
+              </div>
+            </div>
+
+            <div class="col-sm-5">
+              <h1 class="name">James White</h1>
+
+              <p><span class="fa fa-map-signs"></span> Barrie, ON</p>
+              <p><span class="fa fa-phone"></span> 1.705.725.3231</p>
+              <p><span class="fa fa-envelope-o"></span> SkinDeepTattoo@gmail.ca</p>
+            </div>
+
+  <% include ./partials/footer.ejs %>
