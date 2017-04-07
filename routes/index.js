@@ -128,7 +128,7 @@ router.get( '/google/callback',
         failureRedirect: '/login'
     }));
 
-router.get('/auth/outlook',
+router.get('/outlook',
   passport.authenticate('windowslive', {
     scope: [
       'openid',
@@ -139,7 +139,7 @@ router.get('/auth/outlook',
   })
 );
 
-router.get('/auth/outlook/callback',
+router.get('/outlook/callback',
   passport.authenticate('windowslive', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
